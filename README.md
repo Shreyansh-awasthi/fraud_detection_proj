@@ -129,3 +129,5 @@ Threshold 0.95 was chosen as the best balance between catching fraud and minimiz
 ---
 
 > *"The best fraud detection model isn't the most complex one — it's the one that understands the problem."*
+>
+> **Live Demo:**[https://frauddetectionproj-qf89vnabq6spjgqmdunmw7.streamlit.app/]
