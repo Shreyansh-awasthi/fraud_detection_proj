@@ -16,7 +16,7 @@ This project solves that problem properly.
 ## 🧠 Key Design Decisions
 
 ### Why only TRANSFER and CASH_OUT?
-The dataset contains 6 transaction types. After analysis, **PAYMENT and CASH_IN had zero fraud cases** across 4M+ rows. Keeping them would have:
+The dataset contains 4 transaction types. After analysis, **PAYMENT and CASH_IN had zero fraud cases** across 4M+ rows. Keeping them would have:
 - Artificially inflated accuracy
 - Taught the model "these types = never fraud" — not intelligence, just a shortcut
 - Created distributional contamination
