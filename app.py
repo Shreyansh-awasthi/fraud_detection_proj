@@ -6,7 +6,7 @@ import os
 import gdown
 
 
-# ── LOAD MODEL FROM GOOGLE DRIVE ─────────────────────────────
+
 @st.cache_resource
 def load_model():
     model_path = "fraud_detection_model.pkl"
@@ -22,7 +22,7 @@ def load_model():
 
 model, preprocessor, threshold = load_model()
 
-# ── CSS ───────────────────────────────────────────────────────
+
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
@@ -107,7 +107,7 @@ st.markdown("## 🛡️ Fraud Detection System")
 st.caption("XGBoost · scale_pos_weight · TRANSFER & CASH_OUT · by Shreyansh Awasthi")
 st.divider()
 
-# ── SIDEBAR ───────────────────────────────────────────────────
+
 st.sidebar.markdown("### ⚙️ Transaction Input")
 
 step       = st.sidebar.number_input("Step", value=140, min_value=1)
@@ -123,16 +123,16 @@ newbalanceDest = st.sidebar.number_input("New Balance (Receiver)", value=285086.
 st.sidebar.divider()
 predict_btn = st.sidebar.button("🔍 Predict")
 
-# ── ENCODING (0=CASH_OUT, 1=TRANSFER) ────────────────────────
+
 type_ = 1 if type_label == "TRANSFER" else 0
 
-# ── FEATURE ENGINEERING ───────────────────────────────────────
+
 log_amount        = np.log(amount + 1)
 balance_diff_orig = oldbalanceOrg  - newbalanceOrg
 balance_diff_dest = newbalanceDest - oldbalanceDest
 is_drained        = 1 if (newbalanceOrg == 0 and oldbalanceOrg > 0) else 0
 
-# ── INPUT DATAFRAME ───────────────────────────────────────────
+
 input_data = pd.DataFrame({
     "step":              [step],
     "type":              [type_],
@@ -144,7 +144,7 @@ input_data = pd.DataFrame({
     "is_drained":        [is_drained],
 })
 
-# ── LAYOUT ────────────────────────────────────────────────────
+
 left, right = st.columns([1.3, 1], gap="large")
 
 with left:
