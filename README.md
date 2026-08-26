@@ -1,7 +1,7 @@
 # 🛡️ Fraud Detection System
 ### by Shreyansh Awasthi
 
-> End-to-end machine learning pipeline for real-time financial fraud detection — trained on 6.3M transactions with extreme class imbalance (0.13% fraud rate), deployed as an interactive Streamlit web 
+> End-to-end machine learning pipeline for real-time financial fraud detection — trained on 6.3M transactions with extreme class imbalance (0.13% fraud rate), deployed as an interactive Streamlit web
 application
 ---
 
