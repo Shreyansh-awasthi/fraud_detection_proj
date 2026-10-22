@@ -9,7 +9,6 @@ application
 
 Financial fraud detection is one of the hardest real-world ML problems — not because the algorithms are complex, but because the data is brutally imbalanced. Out of 6.3 million transactions, only **8,190 are fraud (0.13%)**. A naive model that predicts "not fraud" every time would achieve 99.87% accuracy while catching zero fraud cases.
 
-This project solves that problem properly.
 
 ---
 
